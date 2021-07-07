@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size_8dp"
+    android:elevation="@dimen/size_4dp"
+    android:padding="@dimen/size_8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size_8dp"
+        android:paddingBottom="@dimen/size_8dp">
+
+
+        <TextView
+            android:id="@+id/tvCreatedByTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_12dp"
+            android:text="Created By: "
+            android:textColor="#000"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCreatedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_12dp"
+            tool:text="@tools:sample/first_names"
+            android:textColor="#000"
+            android:textSize="@dimen/size_16sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvCreatedByTitle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCreatedByTitle"
+            app:layout_constraintRight_toRightOf="@+id/tvCreatedOn"/>
+
+        <TextView
+            android:id="@+id/tvMessageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message: "
+            android:textColor="#000"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/size_4dp"
+            app:layout_constraintLeft_toLeftOf="@id/tvCreatedByTitle"
+            app:layout_constraintStart_toStartOf="@id/tvCreatedByTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvCreatedByTitle"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="@dimen/size_16sp"
+            app:layout_constraintLeft_toLeftOf="@id/tvCreatedBy"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvMessageTitle"
+            app:layout_constraintRight_toRightOf="@+id/tvCreatedBy"/>
+
+        <TextView
+            android:id="@+id/tvCreatedOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="@tools:sample/date/mmddyy"
+            android:textColor="#7F8389"
+            android:textSize="@dimen/size_16sp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:layout_marginRight="@dimen/size_8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
